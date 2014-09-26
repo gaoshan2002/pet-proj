@@ -24,7 +24,7 @@ include(Profiling)
 # Main include paths
 ################################################################################
 
-include_directories( ${PROJECT_SOURCE_DIR}/lib
+include_directories( ${PROJECT_SOURCE_DIR}/include
                      ${CMAKE_INSTALL_PREFIX}/usr/include )
     
 ################################################################################
