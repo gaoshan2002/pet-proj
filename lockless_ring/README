@@ -1,1 +1,3 @@
 This is a lockless ring structure.
+
+For now, it supports one producer and one consumer.
