@@ -35,7 +35,9 @@ add_subdirectory(lockless_ring)
 # Create test executable
 add_executable(util_libs_tests ${TEST_SRCS} gtest.cpp)
 
-target_link_libraries(util_libs_tests  ${GOOGLE_TEST_LIBRARIES}  )
+target_link_libraries(util_libs_tests  ${GOOGLE_TEST_LIBRARIES}
+                                        pthread
+                                        )
 
 add_test(util_libs_tests util_libs_tests)
 

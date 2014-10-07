@@ -2,7 +2,7 @@
 .SILENT:
 
 PLATFORMS=host  
-PROJECT=lockless_ring
+PROJECT=util_libs
 TEST_TIMEOUT=60
 
 SRC_DIR = $(shell readlink -f .)
