@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6.4)
 message(STATUS "CMake version: "${CMAKE_VERSION})
-project(LocklessRing CXX C)
+project(util_libs CXX C)
 
 ################################################################################
 # CMake configuration

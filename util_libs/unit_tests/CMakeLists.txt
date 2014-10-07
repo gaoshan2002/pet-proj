@@ -25,6 +25,7 @@ find_package(Valgrind)
 # Add test subdirectories
 ##############################################################################
 
+add_subdirectory(time_diff)
 add_subdirectory(lockless_ring)
 
 ################################################################################
@@ -32,15 +33,15 @@ add_subdirectory(lockless_ring)
 ################################################################################
     
 # Create test executable
-add_executable(lockless_ring_tests ${TEST_SRCS} gtest.cpp)
+add_executable(util_libs_tests ${TEST_SRCS} gtest.cpp)
 
-target_link_libraries(lockless_ring_tests  ${GOOGLE_TEST_LIBRARIES}  )
+target_link_libraries(util_libs_tests  ${GOOGLE_TEST_LIBRARIES}  )
 
-add_test(lockless_ring_tests lockless_ring_tests)
+add_test(util_libs_tests util_libs_tests)
 
 if(VALGRIND_FOUND)
-    add_test(lockless_ring_memCheck ${VALGRIND_BIN} --error-exitcode=1 ${CMAKE_BINARY_DIR}/unit_tests/lockless_ring_tests)
+    add_test(util_libs_memCheck ${VALGRIND_BIN} --error-exitcode=1 ${CMAKE_BINARY_DIR}/unit_tests/util_libs_tests)
 endif()
          
-install(TARGETS lockless_ring_tests DESTINATION usr/sbin)
+install(TARGETS util_libs_tests DESTINATION usr/sbin)
     
