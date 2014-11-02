@@ -5,16 +5,16 @@ PLATFORMS=host
 PROJECT=util_libs
 TEST_TIMEOUT=60
 
-SRC_DIR = $(shell readlink -f .)
+SRC_DIR = $(shell pwd)
 
 ifndef BUILD_DIR
-	BUILD_DIR = ${SRC_DIR}/build/$(PROJECT)
+	BUILD_DIR = ${SRC_DIR}/../build/$(PROJECT)
 else
 	BUILD_DIR := ${BUILD_DIR}/$(PROJECT)
 endif
 
 ifndef INSTALL_DIR
-	INSTALL_DIR = ${SRC_DIR}/install
+	INSTALL_DIR = ${SRC_DIR}/../install
 endif
 
 ifndef GENERATOR
