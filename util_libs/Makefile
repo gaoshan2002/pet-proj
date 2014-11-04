@@ -5,7 +5,7 @@ PLATFORMS=host
 PROJECT=util_libs
 TEST_TIMEOUT=60
 
-SRC_DIR = $(shell pwd)
+SRC_DIR = $(shell readlink -f .)
 
 ifndef BUILD_DIR
 	BUILD_DIR = ${SRC_DIR}/../build/$(PROJECT)

@@ -10,17 +10,16 @@ if(CMAKE_SYSTEM_PROCESSOR STREQUAL "nios2")
 endif()
 
 find_path(GOOGLE_TEST_INCLUDE_DIR gtest/gtest.h
-          HINTS ${INSTALL_PREFIX}/include 
-                ${INSTALL_PREFIX}/usr/include
+          HINTS ${CMAKE_INSTALL_PREFIX}/include 
+                ${CMAKE_INSTALL_PREFIX}/usr/include
           PATH_SUFFIXES GoogleTest/include )
 
 find_library(GOOGLE_TEST_LIBRARY NAMES libgtest.a gtest
-             HINTS ${INSTALL_PREFIX}/lib
-                   ${INSTALL_PREFIX}/usr/lib 
-                   ${INSTALL_PREFIX}/lib64 
-                   ${INSTALL_PREFIX}/usr/lib64
+             HINTS ${CMAKE_INSTALL_PREFIX}/lib
+                   ${CMAKE_INSTALL_PREFIX}/usr/lib 
+                   ${CMAKE_INSTALL_PREFIX}/lib64 
+                   ${CMAKE_INSTALL_PREFIX}/usr/lib64
              PATH_SUFFIXES gtest )
-
 set(GOOGLE_TEST_LIBRARIES ${GOOGLE_TEST_LIBRARY} )
 set(GOOGLE_TEST_INCLUDE_DIRS ${GOOGLE_TEST_INCLUDE_DIR} )
 
