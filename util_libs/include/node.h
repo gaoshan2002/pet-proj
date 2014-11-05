@@ -8,8 +8,6 @@
 #ifndef NODE_H_
 #define NODE_H_
 
-#include <stddef.h>
-
 namespace sg {
 
 template<class DataType>
