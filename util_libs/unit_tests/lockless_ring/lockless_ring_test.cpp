@@ -11,6 +11,5 @@
 
 TEST(averager, 1_10)
 {
-
     EXPECT_TRUE(true);
 }

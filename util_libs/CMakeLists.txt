@@ -35,5 +35,5 @@ include_directories( ${PROJECT_SOURCE_DIR}/include
 ################################################################################
 # Add sub directories
 ################################################################################
+add_subdirectory(src)
 add_subdirectory(unit_tests)
-
